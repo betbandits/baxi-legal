@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Política de privacidad de Baxi — Examen Taxi Barcelona">
+<title>Política de Privacidad — Baxi</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --ink:       #1B1B2F;
+    --ink-soft:  #6A6A88;
+    --surface:   #F9F9FC;
+    --card:      #FFFFFF;
+    --rule:      #E5E5F0;
+    --accent:    #F7B731;
+    --focus:     #2563EB;
+    --link:      #1D4ED8;
+
+    --sz-xs:  0.75rem;
+    --sz-sm:  0.875rem;
+    --sz-md:  1rem;
+    --sz-lg:  1.125rem;
+    --sz-xl:  1.375rem;
+    --sz-2xl: 1.75rem;
+    --sz-3xl: 2.25rem;
+
+    --max-doc: 680px;
+    --max-wrap: 1120px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink:      #E8E8F5;
+      --ink-soft: #9090B0;
+      --surface:  #111120;
+      --card:     #1C1C2E;
+      --rule:     #2A2A3E;
+      --link:     #93C5FD;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  .top-bar { height: 4px; background: var(--accent); width: 100%; }
+
+  .site-header {
+    background: var(--card);
+    border-bottom: 1px solid var(--rule);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .site-header-inner {
+    max-width: var(--max-wrap); margin: 0 auto; padding: 0 2rem; height: 56px;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  }
+  .logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); }
+  .logo-badge {
+    width: 28px; height: 28px; background: var(--accent); border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 700; color: #1B1B2F; flex-shrink: 0;
+  }
+  .logo-text { font-size: var(--sz-md); font-weight: 600; letter-spacing: -0.01em; }
+  .header-meta {
+    font-size: var(--sz-xs); color: var(--ink-soft); letter-spacing: 0.04em;
+    text-transform: uppercase; white-space: nowrap;
+  }
+
+  .page-wrap {
+    max-width: var(--max-wrap); margin: 0 auto; padding: 3rem 2rem 4rem;
+    display: grid; grid-template-columns: 200px 1fr; gap: 0 3rem; align-items: start;
+  }
+  @media (max-width: 860px) {
+    .page-wrap { grid-template-columns: 1fr; gap: 2rem; }
+    .toc-col { position: static; }
+  }
+  @media (max-width: 480px) {
+    .page-wrap { padding: 2rem 1rem 3rem; }
+    .site-header-inner { padding: 0 1rem; }
+  }
+
+  .toc-col { position: sticky; top: 72px; }
+  .toc-label {
+    font-size: var(--sz-xs); text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ink-soft); font-weight: 600; margin-bottom: 0.75rem;
+  }
+  .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.1rem; }
+  .toc-list a {
+    display: flex; align-items: baseline; gap: 0.5rem; font-size: var(--sz-sm);
+    color: var(--ink-soft); text-decoration: none; padding: 0.3rem 0.5rem; border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .toc-list a:hover { color: var(--ink); background: var(--rule); }
+  .toc-num {
+    font-size: var(--sz-xs); color: var(--accent); font-weight: 700;
+    font-variant-numeric: tabular-nums; flex-shrink: 0; width: 1.4rem;
+  }
+
+  .doc-col { max-width: var(--max-doc); min-width: 0; }
+  .doc-eyebrow {
+    font-size: var(--sz-xs); text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--ink-soft); font-weight: 600; margin-bottom: 0.5rem;
+  }
+  .doc-title {
+    font-size: var(--sz-3xl); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15;
+    text-wrap: balance; margin-bottom: 0.5rem;
+  }
+  @media (max-width: 480px) { .doc-title { font-size: var(--sz-2xl); } }
+  .doc-subtitle { color: var(--ink-soft); margin-bottom: 2rem; line-height: 1.5; }
+
+  .doc-meta-bar {
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; padding: 0.875rem 1rem;
+    background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+    margin-bottom: 2.5rem; font-size: var(--sz-sm);
+  }
+  .doc-meta-item { display: flex; flex-direction: column; gap: 0.15rem; }
+  .doc-meta-key {
+    font-size: var(--sz-xs); text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-soft); font-weight: 600;
+  }
+  .doc-meta-val { font-weight: 500; }
+
+  .doc-section { margin-bottom: 2.5rem; }
+  .section-header {
+    display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem; border-bottom: 2px solid var(--rule);
+  }
+  .section-num {
+    font-size: var(--sz-xs); font-weight: 700; color: var(--accent);
+    flex-shrink: 0; font-variant-numeric: tabular-nums;
+  }
+  .section-title {
+    font-size: var(--sz-xl); font-weight: 700; letter-spacing: -0.02em; line-height: 1.25;
+    text-wrap: balance;
+  }
+  .doc-section p { margin-bottom: 0.875rem; max-width: 65ch; }
+  .doc-section p:last-child { margin-bottom: 0; }
+  .doc-section ul, .doc-section ol {
+    padding-left: 1.25rem; margin-bottom: 0.875rem; max-width: 65ch;
+    display: flex; flex-direction: column; gap: 0.35rem;
+  }
+
+  .provider-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.75rem; margin: 1rem 0;
+  }
+  .provider-card { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 0.875rem 1rem; }
+  .provider-name { font-size: var(--sz-sm); font-weight: 600; margin-bottom: 0.25rem; }
+  .provider-role { font-size: var(--sz-xs); color: var(--ink-soft); line-height: 1.4; }
+
+  .doc-section ul.rights-list { list-style: none; padding: 0; gap: 0.5rem; }
+  .rights-list li { display: flex; gap: 0.6rem; }
+  .rights-list li::before { content: "—"; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+
+  .contact-box {
+    background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+    border-radius: 6px; padding: 1rem 1.25rem; margin: 1rem 0;
+    display: flex; flex-direction: column; gap: 0.25rem;
+  }
+  .contact-label {
+    font-size: var(--sz-xs); text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-soft); font-weight: 600;
+  }
+  .contact-email { font-size: var(--sz-lg); font-weight: 600; text-decoration: none; word-break: break-all; }
+  .contact-email:hover { text-decoration: underline; }
+
+  .site-footer {
+    border-top: 1px solid var(--rule); padding: 1.5rem 2rem; max-width: var(--max-wrap); margin: 0 auto;
+    display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; justify-content: space-between;
+    font-size: var(--sz-xs); color: var(--ink-soft);
+  }
+
+  a { color: var(--link); }
+  a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+  strong { font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="logo" href="#">
+      <span class="logo-badge">B</span>
+      <span class="logo-text">Baxi</span>
+    </a>
+    <span class="header-meta">Política de Privacidad</span>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <nav class="toc-col" aria-label="Tabla de contenidos">
+    <div class="toc-label">Contenido</div>
+    <ol class="toc-list">
+      <li><a href="#s1"><span class="toc-num">1.</span>Datos que recopilamos</a></li>
+      <li><a href="#s2"><span class="toc-num">2.</span>Cómo usamos los datos</a></li>
+      <li><a href="#s3"><span class="toc-num">3.</span>Servicios de terceros</a></li>
+      <li><a href="#s4"><span class="toc-num">4.</span>Suscripción y pagos</a></li>
+      <li><a href="#s5"><span class="toc-num">5.</span>Eliminar tu cuenta</a></li>
+      <li><a href="#s6"><span class="toc-num">6.</span>Seguridad</a></li>
+      <li><a href="#s7"><span class="toc-num">7.</span>Tus derechos (RGPD)</a></li>
+      <li><a href="#s8"><span class="toc-num">8.</span>Menores</a></li>
+      <li><a href="#s9"><span class="toc-num">9.</span>Cambios en la política</a></li>
+      <li><a href="#s10"><span class="toc-num">10.</span>Contacto</a></li>
+    </ol>
+  </nav>
+
+  <main class="doc-col">
+    <div class="doc-eyebrow">Baxi — Examen Taxi Barcelona</div>
+    <h1 class="doc-title">Política de Privacidad</h1>
+    <p class="doc-subtitle">
+      Esta política explica qué datos recopilamos, cómo los usamos y qué derechos tienes como usuario de la aplicación Baxi.
+    </p>
+
+    <div class="doc-meta-bar">
+      <div class="doc-meta-item">
+        <span class="doc-meta-key">Aplicación</span>
+        <span class="doc-meta-val">Baxi — Examen Taxi Barcelona</span>
+      </div>
+      <div class="doc-meta-item">
+        <span class="doc-meta-key">Responsable</span>
+        <span class="doc-meta-val">Desarrollador individual</span>
+      </div>
+      <div class="doc-meta-item">
+        <span class="doc-meta-key">Vigencia</span>
+        <span class="doc-meta-val">3 de octubre de 2026</span>
+      </div>
+      <div class="doc-meta-item">
+        <span class="doc-meta-key">Jurisdicción</span>
+        <span class="doc-meta-val">Unión Europea (RGPD)</span>
+      </div>
+    </div>
+
+    <section class="doc-section" id="s1">
+      <div class="section-header">
+        <span class="section-num">1.</span>
+        <h2 class="section-title">Datos que recopilamos</h2>
+      </div>
+      <p>Al registrarte y usar Baxi recopilamos la siguiente información:</p>
+      <ul>
+        <li><strong>Datos de cuenta</strong>: dirección de correo electrónico y contraseña (almacenada cifrada).</li>
+        <li><strong>Datos de perfil</strong>: nombre o alias que elijas indicar.</li>
+        <li><strong>Progreso de estudio</strong>: respuestas a preguntas, puntuaciones de simulacros, historial de sesiones de estudio y estadísticas de rendimiento por categoría.</li>
+        <li><strong>Estado de suscripción</strong>: si tienes una suscripción activa, la fecha de inicio y de vencimiento.</li>
+        <li><strong>Datos técnicos</strong>: identificador anónimo utilizado por el procesador de pagos para asociar compras a tu cuenta.</li>
+      </ul>
+      <p>No recopilamos ubicación, contactos, fotos ni ningún otro dato personal más allá de los indicados.</p>
+    </section>
+
+    <section class="doc-section" id="s2">
+      <div class="section-header">
+        <span class="section-num">2.</span>
+        <h2 class="section-title">Cómo usamos los datos</h2>
+      </div>
+      <p>Usamos los datos únicamente para los siguientes fines:</p>
+      <ul>
+        <li>Autenticar tu sesión y proteger tu cuenta.</li>
+        <li>Guardar y mostrar tu progreso de estudio entre dispositivos.</li>
+        <li>Verificar si tienes una suscripción activa para desbloquear el contenido completo.</li>
+        <li>Personalizar el repaso con repetición espaciada, para mostrarte las preguntas que más necesitas practicar.</li>
+        <li>Responderte si solicitas soporte técnico.</li>
+      </ul>
+      <p>No usamos tus datos para publicidad ni perfilado comercial, y no los compartimos con terceros salvo los proveedores descritos en la sección 3.</p>
+    </section>
+
+    <section class="doc-section" id="s3">
+      <div class="section-header">
+        <span class="section-num">3.</span>
+        <h2 class="section-title">Servicios de terceros</h2>
+      </div>
+      <p>Baxi utiliza los siguientes proveedores para ofrecer el servicio. Cada uno actúa como encargado del tratamiento bajo acuerdos de protección de datos compatibles con el RGPD:</p>
+
+      <div class="provider-grid">
+        <div class="provider-card">
+          <div class="provider-name">Supabase</div>
+          <div class="provider-role">Base de datos, autenticación y almacenamiento del progreso de estudio.</div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-name">RevenueCat</div>
+          <div class="provider-role">Gestión de suscripciones y verificación de compras en Android.</div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-name">Google Play</div>
+          <div class="provider-role">Procesamiento del pago de la suscripción, según la política de privacidad de Google.</div>
+        </div>
+      </div>
+
+      <p>Estos proveedores solo reciben los datos estrictamente necesarios para su función y no están autorizados a usarlos para otros fines.</p>
+    </section>
+
+    <section class="doc-section" id="s4">
+      <div class="section-header">
+        <span class="section-num">4.</span>
+        <h2 class="section-title">Suscripción y pagos</h2>
+      </div>
+      <p>Baxi ofrece acceso completo mediante una suscripción mensual procesada a través de Google Play. Tu método de pago lo gestiona exclusivamente Google; Baxi nunca accede a datos de tarjetas ni los almacena.</p>
+      <p>Puedes cancelar la suscripción en cualquier momento desde Google Play → Pagos y suscripciones. La cancelación se aplica al final del período de facturación en curso.</p>
+      <p>Al suscribirte aceptas los <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Términos del Servicio de Google Play</a>.</p>
+    </section>
+
+    <section class="doc-section" id="s5">
+      <div class="section-header">
+        <span class="section-num">5.</span>
+        <h2 class="section-title">Eliminar tu cuenta y conservación de datos</h2>
+      </div>
+      <p>Conservamos tus datos mientras tu cuenta esté activa. Para eliminar tu cuenta de Baxi y todos sus datos:</p>
+      <ol>
+        <li>Envía un correo a <a href="mailto:opud93@gmail.com?subject=Eliminar%20cuenta%20Baxi">opud93@gmail.com</a> con el asunto «Eliminar cuenta Baxi».</li>
+        <li>Escríbelo desde la dirección de correo con la que te registraste en la app.</li>
+        <li>Confirmaremos la eliminación por correo.</li>
+      </ol>
+      <p>Se eliminan tu cuenta, tu perfil y todo tu progreso de estudio en un plazo máximo de 30 días. Solo conservaremos lo que la ley nos obligue a guardar (por ejemplo, registros de transacciones), durante el tiempo legalmente exigido.</p>
+      <p>Eliminar la cuenta no cancela la suscripción de Google Play: cancélala también desde Google Play para evitar nuevos cobros.</p>
+    </section>
+
+    <section class="doc-section" id="s6">
+      <div class="section-header">
+        <span class="section-num">6.</span>
+        <h2 class="section-title">Seguridad</h2>
+      </div>
+      <p>Tomamos medidas razonables para proteger tu información:</p>
+      <ul>
+        <li>Las contraseñas se almacenan con hash seguro y nunca en texto plano.</li>
+        <li>Toda la comunicación entre la app y los servidores usa HTTPS/TLS.</li>
+        <li>El acceso a la base de datos está restringido por políticas de seguridad por fila: solo puedes leer y escribir tus propios datos.</li>
+      </ul>
+      <p>Ningún sistema es 100 % seguro. Si detectas una vulnerabilidad, comunícala al contacto de la sección 10.</p>
+    </section>
+
+    <section class="doc-section" id="s7">
+      <div class="section-header">
+        <span class="section-num">7.</span>
+        <h2 class="section-title">Tus derechos (RGPD)</h2>
+      </div>
+      <p>Si resides en el Espacio Económico Europeo tienes los siguientes derechos sobre tus datos personales:</p>
+      <ul class="rights-list">
+        <li><span><strong>Acceso</strong>: solicitar una copia de los datos que tenemos sobre ti.</span></li>
+        <li><span><strong>Rectificación</strong>: pedir que corrijamos datos inexactos.</span></li>
+        <li><span><strong>Supresión</strong>: pedir que eliminemos tus datos («derecho al olvido»).</span></li>
+        <li><span><strong>Portabilidad</strong>: recibir tus datos en un formato estructurado y legible por máquina.</span></li>
+        <li><span><strong>Oposición</strong>: oponerte a ciertos tratamientos de tus datos.</span></li>
+        <li><span><strong>Limitación</strong>: pedir que restrinjamos el tratamiento mientras resolvemos una disputa.</span></li>
+      </ul>
+      <p>Para ejercer cualquiera de estos derechos, escríbenos (sección 10). También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+    </section>
+
+    <section class="doc-section" id="s8">
+      <div class="section-header">
+        <span class="section-num">8.</span>
+        <h2 class="section-title">Menores</h2>
+      </div>
+      <p>Baxi está dirigida a personas que se preparan para obtener la licencia de taxi en Barcelona, para la que se exige ser mayor de edad. La aplicación no está destinada a menores de 18 años y no recopilamos conscientemente datos de menores.</p>
+      <p>Si sabes que un menor nos ha facilitado datos personales, contacta con nosotros para eliminarlos.</p>
+    </section>
+
+    <section class="doc-section" id="s9">
+      <div class="section-header">
+        <span class="section-num">9.</span>
+        <h2 class="section-title">Cambios en la política</h2>
+      </div>
+      <p>Podemos actualizar esta política cuando lo requieran cambios en el servicio o en la normativa aplicable. Si los cambios son significativos, te avisaremos dentro de la aplicación o por correo electrónico antes de que entren en vigor.</p>
+      <p>La fecha de «Vigencia» al inicio de este documento indica cuándo entró en vigor la versión actual.</p>
+    </section>
+
+    <section class="doc-section" id="s10">
+      <div class="section-header">
+        <span class="section-num">10.</span>
+        <h2 class="section-title">Contacto</h2>
+      </div>
+      <p>Para cualquier pregunta, solicitud de derechos o aviso de seguridad relacionado con esta política, escríbenos a:</p>
+      <div class="contact-box">
+        <span class="contact-label">Correo electrónico</span>
+        <a class="contact-email" href="mailto:opud93@gmail.com">opud93@gmail.com</a>
+      </div>
+      <p>Respondemos en un plazo máximo de 30 días naturales.</p>
+    </section>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <span>© 2026 Baxi — Examen Taxi Barcelona</span>
+  <span>Vigente desde el 3 de octubre de 2026</span>
+</footer>
+
+</body>
+</html>
